@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UNESCO ITALIA</title>
+	<link rel="icon" type="image/x-icon" href="immagini/UnescoLogoNero.png">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<!-- link file css -->
+	<link rel="stylesheet" href="gallery5.css">
+</head>
+
+<body>
+
+	<!-- Swiper -->
+	<div class="swiper mySwiper" style="padding-top:100px;">
+		<div class="swiper-wrapper"></div>
+	</div>
+
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		function getPathId() {
+
+			let s = window.location.search;
+			console.log(window.location);
+			//https://www.w3schools.com/jsref/jsref_lastindexof.asp
+			let index = s.lastIndexOf("id=");
+			//https://www.w3schools.com/jsref/jsref_substring.asp
+			let pathId = s.substring(index + 3);
+			console.log("L'id preso dal path è {" + pathId + "}");
+			return pathId;
+		}
+		// fetch per ottenere le immagini
+		fetch('imagesByPatrimonio2/'+getPathId())
+			.then(response => response.json())
+			.then(data => {
+				// ottieni il div wrapper di Swiper
+				const swiperWrapper = document.querySelector('.swiper-wrapper');
+				// cicla attraverso i dati delle immagini e crea i tag div per ogni immagine
+				data.forEach(image => {
+					const div = document.createElement('div');
+					div.classList.add('swiper-slide');
+					const img = document.createElement('img');
+					img.src = image.link; // controlla se l'immagine ha il campo "link" o "src"
+					img.alt = image.alt;
+					div.appendChild(img);
+					swiperWrapper.appendChild(div);
+				});
+
+				// inizializza Swiper
+				var swiper = new Swiper(".mySwiper", {
+					effect: "coverflow",
+					grabCursor: true,
+					centeredSlides: true,
+					slidesPerView: "auto",
+					coverflowEffect: {
+						rotate: 15,
+						stretch: 0,
+						depth: 300,
+						modifier: 1,
+						slideShadows: true,
+					},
+					loop: true,
+				});
+			})
+			.catch(error => console.error(error));
+	</script>
+</body>
+
+</html>

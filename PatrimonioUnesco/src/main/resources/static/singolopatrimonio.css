@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 200% !important;
+}
+
+h2 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin-bottom: 0px !important;
+	font-size: 100% !important;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+h3 {
+	margin: 0px !important;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+.slide {
+	position: relative;
+	padding: 25vh 10%;
+	min-height: 100vh;
+	width: 100vw;
+	box-sizing: border-box;
+	box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+.foto {
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	width: 320px;
+	height: 240px;
+	transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+	padding: 10px;
+	border-radius: 5px;
+	background: rgba(240, 230, 220, .7);
+	box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.foto:last-of-type {
+	transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+	width: 40%;
+	padding: 5%;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.785);
+	box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+	float: right;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.slide:nth-child(2n) .title {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+	margin-right: 0;
+	float: right;
+	/* aggiunto */
+}
+
+.slide,
+.slide:before {
+	background: 50% 50% / cover;
+}
+
+.header {
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 0 6px 6px #000;
+}
+
+#title {
+	z-index: 2;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+#slide2 {
+	z-index: 2;
+	clear: both;
+}
+
+/*PARTE NERA*/
+#slide4 {
+	background: rgb(18, 18, 18);
+}
+
+.storia {
+	padding-bottom: 100px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.storia h2 {
+	font-size: 40px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.storia p {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.874);
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+/* MAPPA */
+.sticky-map__address p {
+	font-size: 25px;
+	color: rgba(255, 255, 255, 0.874);
+}
+
+/*SERVIZI*/
+.services {
+	max-width: 960px;
+	margin: 0 auto;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.service-tab {
+	padding-bottom: 50px;
+	gap: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.service {
+	background-color: #6e6e6e3f;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-radius: 15px;
+	align-items: center;
+	min-height: 120px;
+	max-height: 120px;
+	overflow: hidden;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.service i {
+	height: auto;
+	max-height: 25px;
+	color: rgb(255, 255, 255);
+	/* icona grigia */
+}
+
+.service h3 {
+	margin-top: 0;
+	font-size: 16px;
+	display: inline-block;
+	/* posiziona nome servizio accanto all'icona */
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.service p {
+	margin-bottom: 0;
+	font-size: 14px;
+	display: block;
+	/* descrizione sotto il nome */
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.title-between-rows {
+	padding-top: 20px;
+	text-align: center;
+
+}
+
+.content-wrapper {
+	box-sizing: border-box;
+	padding-top: 100px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.content-wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 0.5rem;
+}
+
+.news-card {
+	border: 0px solid aqua;
+	margin: 0.5rem;
+	position: relative;
+	height: 12rem;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	flex: 1;
+	min-width: 290px;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.news-card:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+	z-index: 0;
+}
+
+.news-card__card-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.news-card__image {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	transition: transform 3s ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: relative;
+	z-index: -1;
+}
+
+.news-card__text-wrapper {
+	position: absolute;
+	bottom: 0rem;
+	padding: 1rem;
+	color: white;
+	transition: background-color 1.5s ease;
+	width: 100%;
+}
+
+.news-card__title {
+	transition: color 1s ease;
+	margin-bottom: .5rem;
+	font-size: 40px;
+}
+
+.news-card__post-date {
+	font-size: 20px;
+	margin-bottom: .5rem;
+	color: #CCC;
+}
+
+.news-card__details-wrapper {
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 1.5s ease, opacity 1s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.news-card__read-more {
+	background: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	display: block;
+	padding: 0.4rem 0.6rem;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	border: 1px solid #444;
+	font-size: 0.8rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	text-decoration: none;
+	margin: auto;
+	position: relative;
+	z-index: 5;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+.news-card:hover .news-card__details-wrapper {
+	max-height: 20rem;
+	width: 100%;
+	opacity: 1;
+}
+
+.news-card:hover .news-card__text-wrapper {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: rgb(255, 255, 255);
+}
+
+.news-card:hover .news-card__title {
+	color: rgb(255, 255, 255);
+}
+
+.news-card:hover .news-card__excerpt {
+	color: rgb(255, 255, 255);
+}
+
+.news-card:hover .news-card__image {
+	transform: scale(1.2);
+	z-index: -1;
+}
+
+.news-card:hover .news-card__post-date {
+	color: rgb(255, 255, 255);
+}
+
+
+@media (min-width: 600px) {
+	.news-card {
+		height: 12rem;
+	}
+
+	.news-card:hover .news-card__details-wrapper {
+		max-height: 20rem;
+		opacity: 1;
+	}
+}
+
+@media (min-width: 900px) {
+	.news-card {
+		height: 20rem;
+	}
+
+	.news-card:hover .news-card__details-wrapper {
+		max-height: 20rem;
+		opacity: 1;
+	}
+}

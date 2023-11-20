@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UNESCO ITALIA</title>
+	<link rel="icon" type="image/x-icon" href="immagini/UnescoLogoNero.png">
+	<link rel="stylesheet" href="tipidipatrimoni.css">
+	<link rel="stylesheet" href="navbar.css">
+	<!-- bootstrap link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- bootstrap link -->
+
+	<!-- icons -->
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<!-- icons -->
+	<link rel="stylesheet" href="tipipatrimoni.css">
+	<link rel="stylesheet" href="carte.css">
+	<script src="tipipatrimoni.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="navbar-top">
+			<div class="logo">
+				<img src="immagini/UnescoLogoNero.png" alt="">
+				<h3 class="m-0">UNESCO ITALIA</h3>
+			</div>
+		</div>
+	</div>
+	<!-- navbar top -->
+	<!-- navbar bottom -->
+	<div>
+		<nav class="navbar navbar-expand-md" style="padding: 0px !important;" id="navbar-color">
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" style="padding: 0rem !important;" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="padding: 0rem !important;" href="tuttipatrimoni.html">Patrimoni</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="padding: 0rem !important;" href="galleria.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" style="padding: 0rem !important;" href="http://localhost:8087/index.html">Guide Turistiche</a>
+					</li>
+				</ul>
+			</div>
+	</div>
+	</nav>
+	</div>
+	<!-- navbar bottom -->
+	<!-- main content -->
+	<div id="singletype"></div>
+
+	<!--CONTAINER ESPLORA-->
+	<div class="container" style="padding-top:100px; text-align: center;">
+		<h2>Scoprili con le nostre card!</h2>
+	</div>
+
+	<div class="container">
+		<section class="card-list" id="listapatrimoni">
+		</section>
+	</div>
+	<!-- INIZIO RIPETIZIONE -->
+
+
+	<!-- about -->
+	<div class="container">
+		<h1 class="text-center" style="margin-top: 100px;">ABOUT</h1>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-md-6 py-3 py-md-0">
+				<div class="gallery">
+					<img src="immagini/CinqueTerre.jpg" alt="a house on the mountain">
+					<img src="immagini/firenze.jpg" alt="a big building">
+					<img src="immagini/colosseo.jpg" alt="another house">
+					<img src="immagini/torre di pisa.jpeg" alt="a small road between two houses">
+					<img src="immagini/casteldelmonte.jpg" alt="a modern city">
+					<img src="immagini/casa-badra.jpg" alt="a lot of old houses">
+				</div>
+			</div>
+			<div class="col-md-6 py-3 py-md-0">
+				<p class="p-0">L’Italia possiede il più grande patrimonio artistico e culturale di tutto il mondo,
+					lasciato in dono
+					dal sovrapporsi di popoli e culture nei secoli, costituito da più di 3400 musei, 2100 parchi
+					archeologici e 43 siti Unesco. Tuttavia si ha spesso
+					l’impressione che si dia poca importanza e non si valorizzi adeguatamente il patrimonio artistico e
+					culturale italiano, al contrario dei sensi dell’articolo 9 della Costituzione
+					Italiana che cita “La Repubblica promuove lo sviluppo della cultura e la ricerca scientifica e
+					tecnica.
+					Tutela il paesaggio e il patrimonio storico e artistico della Nazione.”
+					Il nostro patrimonio è infatti così grande che viene, generalmente, da noi sottovalutato:
+					al contrario di quanto avviene in altri paesi, ovvero valorizzare le poche ricchezze che si
+					hanno nella maniera migliore, in Italia, forse perché consapevoli di avere un patrimonio artistico e
+					culturale unico al mondo, raramente ci impegniamo a valorizzarlo come meriterebbe.
+					<span id="dots"></span><span id="more" style="display: none;">Molto spesso infatti mancano cure
+						adeguate, come operazioni di restauro o un controllo più efficace e attento. Questo approccio
+						superficiale alla promozione del nostro patrimonio è dovuto a vari fattori, quali l’ampia
+						distribuzione su tutto il Paese delle dei beni, che comporta complicanze come la dispersione,
+						che rende difficile il coordinamento degli interventi, o anche l’impossibilità di stabilire la
+						priorità di un monumento o un’opera rispetto ad un altro, che causa uno stato di semiabbandono
+						di molti palazzi, chiese, o addirittura interi centri storici, che cadono a pezzi. Ma il
+						problema più grande è che nonostante il possedimento di questa grande ricchezza, in Italia non
+						si riscontra un ritorno economico adeguato. A causa delle considerevoli spese necessarie alla
+						salvaguardia, recupero e restauro, le opere d’arte sembrano essere più un peso finanziario che
+						una fonte di guadagno. Dovrebbero invece essere attuate delle adeguate strategie di sviluppo, in
+						modo da sfruttare queste enormi ricchezze e tramutarle in vantaggi economici. </span>
+				</p>
+				<button onclick="readMore()" id="button-35"><span>Continua a leggere</span></button>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<!-- about -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<h1 class="text-center">UNESCO ITALIA</h1>
+		<p class="text-center">Scopri insieme a noi tutti i siti patrimonio Unesco italiani</p>
+		<div class="icons text-center">
+			<i class="bx bxl-twitter"></i>
+			<i class="bx bxl-facebook"></i>
+			<i class="bx bxl-google"></i>
+			<i class="bx bxl-skype"></i>
+			<i class="bx bxl-instagram"></i>
+		</div>
+		<div class="copyright text-center">
+			&copy; Copyright <strong><span>Unesco Italia</span></strong>. All Rights Reserved
+		</div>
+		<div class="credite text-center">
+			Designed By <a href="#">JAITA82</a>
+		</div>
+	</footer>
+	<!-- footer -->
+
+	<!--JAVASCRIPT READ MORE-->
+	<script>
+		function readMore() {
+			var dots = document.getElementById("dots");
+			var moreText = document.getElementById("more");
+			var btnText = document.getElementById("button-35");
+
+			if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "Continua a leggere";
+				moreText.style.display = "none";
+			} else {
+				dots.style.display = "none";
+				btnText.innerHTML = "Riduci";
+				moreText.style.display = "inline";
+			}
+		}
+	</script>
+</body>
+
+</html>
