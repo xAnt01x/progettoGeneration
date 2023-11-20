@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galleria del Patrimonio UNESCO</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
+  <link href="css/login.css" rel="stylesheet" type="text/css">
+  <link href="css/infiniteAutoplay.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <link href="css/galleria.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+  
+<style>
+  /* Stili CSS per la presentazione del team */
+  .team-container {
+    max-width: 800px;
+    margin-top: 2%;
+    padding: 3%;
+    
+  }
+  .team-member {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .team-member-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .team-member-info {
+    flex-grow: 1;
+  }
+  .team-member-info h3 {
+    margin: 0;
+  }
+  .team-member-info p {
+    margin-top: 5px;
+  }
+
+  h2{
+
+      font-size: 50px;
+      color: black;
+  }
+
+      
+      
+  
+  p{ font-family: 'Courier New', Courier, monospace;
+      color: black;
+  }
+  
+  </style>
+
+  
+ <!--  <link href="css/carousel.scss"> -->
+ 
+  
+</head>
+<body>
+  
+  <!-- questo div contiene tutto il contenuto della pagina -->
+  <div>
+    <!-- NAVBAR UNESCO -->
+    <div class="container1">
+      <div class="navbar-top">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UNESCO_logo.svg/2560px-UNESCO_logo.svg.png">
+          <h3 class="m-0">UNESCO ITALIA</h3>
+        </div>
+      </div>
+    </div>
+  <!-- NAVBAR SUPERIORE -->
+    <div class="navbar">
+        <a href="index.html" style="color:white">Home</a>
+        <a href="recensioni.html" style="color:white">Cosa dicono di noi</a>
+        <a href="prenota.html" style="color:white">Prenota</a>
+        <a class="active" href="guide.html"style="color:white">Le Nostre Guide</a>
+        <a id="hiddenPage" href="admin.html"style="color:white">Admin</a>
+        <!-- SPOSTAMENTO DEL LOGIN A DESTRA DELLA NAVBAR -->
+        <div class="right-element">
+          
+          <button class="button" id="loginButton">
+            <span class="button-content" id="loginBtn">Log In</span>   
+          </button>
+        <div id="loggedName" class="logg" hidden ></div>
+        <button onclick="logout()" class="button" id="logoutButton" hidden>
+          <span class="button-content" id="loginBtn">Log Out</span>   
+        </button>
+        </div>
+      </div>
+      <!-- STRUTTURA DEL LOGIN UNA VOLTA CLICCATO -->
+      <div id="loginModal" class="modal">
+        <div class="login-box">
+          <span class="close">&times;</span>
+          <h2 style="color:white;font-size: 1.5em;"><center>Login</center></h2>
+          
+            <div class="user-box">
+              <input type="text" id="username" name="" required="">
+              <label>Username</label>
+            </div>
+            <div class="user-box">
+              <input type="password" id="password" name="" required="">
+              <label>Password</label>
+            </div><center>
+              
+            <button class="myButton" onclick="tryLogin()">
+                   SEND
+               <span></span>
+            </button></center>
+          
+        </div> 
+      </div>
+    
+    <!-- Aggiungi altri luoghi UNESCO qui -->
+  
+   <center> <div class="team-container"></center>
+      <div id="list" class="row">
+       
+        </div>
+      </div>
+    </div>
+
+      
+    </div>
+
+    
+   
+   
+    <script src="js/guide.js"></script>
+    <script src="js/galleria.js"></script>
+    <script src="js/index.js"></script>
+    
+    </div>
+
+     <!-- footer -->
+     <footer id="footer">
+      <center><h1 class="text-center" style="margin-bottom: 10px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">UNESCO ITALIA</h1>
+        <p class="text-center p-0" style="margin-bottom: 1rem; font-family:'Courier New', Courier, monospace">Scopri insieme a noi tutti i siti patrimonio Unesco
+          italiani</p></center>
+        <center><div class="icons text-center">
+          <i class="bx bxl-twitter"></i>
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-google"></i>
+          <i class="bx bxl-skype"></i>
+          <i class="bx bxl-instagram"></i>
+        </div></center>
+        <center><div class="copyright text-center">
+          &copy; Copyright <strong><span style="font-family: 'Courier New', Courier, monospace;">Unesco Italia</span></strong>. All Rights Reserved
+        </div>
+        <div class="credite text-center">
+          Designed By <a href="#">JAITA82</a>
+        </div></center>
+      </footer>
+</body>
+</html>

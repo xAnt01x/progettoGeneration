@@ -1,0 +1,64 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+}
+.calendar-entry {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 8px;
+  display: flex;
+  max-width: 600px;
+  height: 110px;
+  background-color: #f5f5f5;
+  align-content: center;
+}
+.calendar-day { font-family: lobster;
+  font-size: 46px;
+}
+.calendar-month { font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  font-weight: 550;
+  color: rgba(150, 93, 233, 1);
+}
+.calendar-date {
+  flex-shrink: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(150, 93, 233, 1);
+  color: #fff;
+  width: 90px;
+  margin: 8px;
+}
+.calendar-content {
+  margin: 1rem;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.calendar-content > h4, .calendar-content > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clickable-div {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  text-decoration: none;
+}
+.container2 {
+  display: grid;
+    grid-template-columns: 1fr 1fr; /* divide lo spazio in due colonne di larghezza uguale */
+    grid-gap: 10px; /* spazio tra le colonne */
+  }
+  .orario {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }

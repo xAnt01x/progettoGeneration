@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galleria del Patrimonio UNESCO</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+  <link href="css/button.css" rel="stylesheet" type="text/css">
+  <link href="css/login.css" rel="stylesheet" type="text/css">
+  <link href="css/infiniteAutoplay.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <link href="css/galleria.css" rel="stylesheet" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+  
+  
+
+  
+ <!--  <link href="css/carousel.scss"> -->
+ 
+  
+</head>
+<body>
+  
+  <!-- questo div contiene tutto il contenuto della pagina -->
+  <div>
+    <!-- NAVBAR UNESCO -->
+    <div class="container1">
+      <div class="navbar-top">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/UNESCO_logo.svg/2560px-UNESCO_logo.svg.png">
+          <h3 class="m-0">UNESCO ITALIA</h3>
+        </div>
+      </div>
+    </div>
+  <!-- NAVBAR SUPERIORE -->
+    <div class="navbar">
+        <a class="active" href="index.html" style="color:white">Home</a>
+        <a href="recensioni.html" style="color:white">Cosa dicono di noi</a>
+        <a href="prenota.html" style="color:white">Prenota</a>
+        <a href="guide.html"style="color:white">Le Nostre Guide</a>
+        <a id="hiddenPage" href="admin.html"style="color:white">Admin</a>
+        <!-- SPOSTAMENTO DEL LOGIN A DESTRA DELLA NAVBAR -->
+        <div class="right-element">
+          
+          <button class="button" id="loginButton">
+            <span class="button-content" id="loginBtn">Log In</span>   
+          </button>
+        <div id="loggedName" class="logg" hidden ></div>
+        <button onclick="logout()" class="button" id="logoutButton" hidden>
+          <span class="button-content" id="loginBtn">Log Out</span>   
+        </button>
+        </div>
+      </div>
+      <!-- STRUTTURA DEL LOGIN UNA VOLTA CLICCATO -->
+      <div id="loginModal" class="modal">
+        <div class="login-box">
+          <span class="close">&times;</span>
+          <h2 style="color:white"><center>Login</center></h2>
+          
+            <div class="user-box">
+              <input type="text" id="username" name="" required="">
+              <label>Username</label>
+            </div>
+            <div class="user-box">
+              <input type="password" id="password" name="" required="">
+              <label>Password</label>
+            </div><center>
+              
+            <button class="myButton" onclick="tryLogin()">
+                   SEND
+               <span></span>
+            </button></center>
+          
+        </div> 
+      </div>
+      <!-- IMPLEMENTAZIONI SCRIPT -->
+      
+     
+     
+      <div style="height:100%; display:flex; flex-direction:row; background:linear-gradient (
+        82.3deg,
+        rgb(255, 251, 211) 10.8%,
+        rgb(250, 221, 197) 94.3%
+      );">
+ 
+    <!-- Aggiungi altri luoghi UNESCO qui -->
+  
+    <div style="width:30%; padding:30px; " class="back" > <h1 class="font" style="margin-bottom: 20px;"> <center>Un'Italia da scoprire!</center></h1>
+  
+      <center><p class="font"><span class="font1">Il nostro obiettivo:</span> valorizzare la storia e la cultura dello Stivale grazie al contributo degli studenti delle facolta' di Storia dell'Arte, Storia ed Archeologia provenienti dalle maggiori eccellenze del panorama universitario italiano. 
+      <br>Forniamo infatti un servizio di guide turistiche che rappresenti al meglio il nostro Paese.
+      <br>E chi meglio puo' farlo, se non <span class="font1">studenti motivati ed ambiziosi</span> ? </p></center>
+      <center><h1 class="font" style="margin-top: 20px;">Scegli una delle mete a disposizione per saperne di piu'! </h1></center>
+    </div>
+    <div class="container" style="margin-left:0; width:70%;" >
+      <header class="c-header c-header--archive c-header--project-list">
+        <div class="c-mouse-vertical-carousel js-carousel u-media-wrapper u-media-wrapper--16-9">
+          <ul class="c-mouse-vertical-carousel__list js-carousel-list">
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="0">
+              <a href="http://localhost:8083/singolopatrimonio.html?id=1">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                01
+              </span> Roma
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Colosseo
+                </p>
+              </a>
+            </li>
+    
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="1">
+              <a href="http://localhost:8083/singolopatrimonio.html?id=5">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                02
+              </span> Pisa
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Torre di Pisa
+                </p>
+              </a>
+            </li>
+    
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="2">
+              <a href="prenota.html">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                03
+              </span> Agrigento
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Area archeologia di Agrigento
+                </p>
+              </a>
+            </li>
+    
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="3">
+              <a href="prenota.html">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                04
+              </span> Napoli
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Pompei
+                </p>
+              </a>
+            </li>
+    
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="4">
+              <a href="prenota.html">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                05
+              </span> Pienza
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Centro storico di Pienza
+                </p>
+              </a>
+            </li>
+            
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="5">
+              <a href="prenota.html">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                06
+              </span> Matera
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  I Sassi
+                </p>
+              </a>
+            </li>
+            
+            <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="6">
+              <a href="http://localhost:8083/singolopatrimonio.html?id=6">
+                <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                  <span>
+                07
+              </span> Andria
+                </p>
+    
+                <p class="c-mouse-vertical-carousel__title u-a5">
+                  Castel del Monte
+                </p>
+              </a>
+            </li>
+          </ul>
+    
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://media.istockphoto.com/id/1194899511/it/foto/colosseo-a-roma-senza-gente-al-mattino-italia.jpg?s=612x612&w=0&k=20&c=nhe1qlAtJqrdm3NIqStWtDxqXrnbiR7RF9N0tzBMl9Q=')"></i>
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://super.abril.com.br/wp-content/uploads/2018/07/578d3d3a0e21634575206d77pisa1.jpeg?quality=90&strip=info&w=1024')"></i>
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Concordiatempelagrigent3.jpg/1024px-Concordiatempelagrigent3.jpg')"></i>
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://siviaggia.it/wp-content/uploads/sites/2/2015/12/visitare-pompei.jpg')"></i>
+          
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://images.placesonline.com/photos/424012607170248_Pienza_152788655.jpg')"></i>
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://static2-viaggi.corriereobjects.it/wp-content/uploads/2019/10/iStock-905351688-1080x687.jpg?v=1572448301')"></i>
+          <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Castel_del_Monte_BW_2016-10-14_12-26-11_r.jpg/1024px-Castel_del_Monte_BW_2016-10-14_12-26-11_r.jpg')"></i>
+          
+          <i class="c-gradient-overlay"></i>
+        </div>
+      </header>
+    </div>
+</div>
+    
+   
+   
+
+    <script src="js/galleria.js"></script>
+    <script src="js/index.js"></script>
+    </div>
+    <!-- footer -->
+	<footer id="footer">
+  <center><h1 class="text-center" style="margin-bottom: 10px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">UNESCO ITALIA</h1>
+		<p class="text-center p-0" style="margin-bottom: 1rem; font-family:'Courier New', Courier, monospace">Scopri insieme a noi tutti i siti patrimonio Unesco
+			italiani</p></center>
+		<center><div class="icons text-center">
+			<i class="bx bxl-twitter"></i>
+			<i class="bx bxl-facebook"></i>
+			<i class="bx bxl-google"></i>
+			<i class="bx bxl-skype"></i>
+			<i class="bx bxl-instagram"></i>
+		</div></center>
+		<center><div class="copyright text-center">
+			&copy; Copyright <strong><span style="font-family: 'Courier New', Courier, monospace;">Unesco Italia</span></strong>. All Rights Reserved
+		</div>
+		<div class="credite text-center">
+			Designed By <a href="#">JAITA82</a>
+		</div></center>
+	</footer>
+    
+</body>
+</html>
